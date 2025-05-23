@@ -7,6 +7,7 @@ This API extracts geographical locations (cities, countries, etc.) from a given 
 The API provides endpoints for each model and a simple HTML frontend to interact with them.
 
 ## Project Structure
+```markdown
 location_extractor_api/
 ├── README.md
 ├── requirements.txt
@@ -39,6 +40,7 @@ location_extractor_api/
 │   │   └── best_bilstm_crf_location_ner_model_pytorch.pth
 │   └── ner_model_spacy/
 ├── logs/
+```
                       
 ## Setup
 
