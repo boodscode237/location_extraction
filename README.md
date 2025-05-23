@@ -7,8 +7,39 @@ This API extracts geographical locations (cities, countries, etc.) from a given 
 The API provides endpoints for each model and a simple HTML frontend to interact with them.
 
 ## Project Structure
-
-location_extractor_api/├── README.md                      # Project documentation├── requirements.txt               # Dependencies list├── .gitignore                     # Git ignore file├── main.py                        # Entry point for the application├── app/                           # Main application package│   ├── init.py                # Makes app a Python package│   ├── api/                       # API routes│   │   ├── init.py│   │   ├── endpoints.py           # API endpoint routes│   │   └── models.py              # Request/response models│   ├── core/                      # Core application components│   │   ├── init.py│   │   └── config.py              # Configuration settings (paths, constants)│   ├── models/                    # ML model related code│   │   ├── init.py│   │   ├── bilstm.py              # BiLSTM-CRF model class│   │   └── loaders.py             # Model loading utilities & global model instances│   ├── services/                  # Business logic│   │   ├── init.py│   │   ├── spacy_service.py       # SpaCy extraction logic│   │   └── bilstm_service.py      # BiLSTM extraction logic│   └── frontend/                  # Frontend templates│       ├── init.py│       └── html.py                # HTML template for frontend├── data/                          # Directory for data files (create this manually)│   ├── BILSTM/                    # BiLSTM model files│   │   ├── ner_word2idx.pkl│   │   ├── ner_tag2idx.pkl│   │   └── best_bilstm_crf_location_ner_model_pytorch.pth│   └── ner_model_spacy/           # SpaCy model files (contents of your trained spaCy model)└── logs/                          # Directory for log files (create this manually, if needed for file-based logging)
+location_extractor_api/
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── main.py
+├── app/
+│   ├── __init__.py
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── endpoints.py
+│   │   └── models.py
+│   ├── core/
+│   │   ├── __init__.py
+│   │   └── config.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── bilstm.py
+│   │   └── loaders.py
+│   ├── services/
+│   │   ├── __init__.py
+│   │   ├── spacy_service.py
+│   │   └── bilstm_service.py
+│   └── frontend/
+│       ├── __init__.py
+│       └── html.py
+├── data/
+│   ├── BILSTM/
+│   │   ├── ner_word2idx.pkl
+│   │   ├── ner_tag2idx.pkl
+│   │   └── best_bilstm_crf_location_ner_model_pytorch.pth
+│   └── ner_model_spacy/
+├── logs/
+                      
 ## Setup
 
 1.  **Create Directories**:
